@@ -26,13 +26,13 @@ nav{
 }
 
 article{
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
     height: 150px;
     width: 500px;
     overflow: scroll;
     margin-top: 15px;
     margin-left: 400px;
     text-align: center;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
 }
