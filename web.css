@@ -26,9 +26,10 @@ nav{
 }
 
 article{
-    margin-top: 10px;
+    height: 300px;
+    width: 500px;
+    margin-top: 15px;
     margin-left: 400px;
-    margin-right: 400px;
     text-align: center;
     border-width: 2px;
     border-style: solid;
