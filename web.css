@@ -1,0 +1,12 @@
+header{
+    text-align: center;
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20210115/pngtree-atmosphere-real-galaxy-starry-banner-background-image_520258.jpg");
+    background-size: contain;
+    font-size: 125%;
+}
+
+body{
+    background-color: black;
+    font-size: 20px;
+    color: white;
+}
