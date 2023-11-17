@@ -24,3 +24,15 @@ nav{
     height:200px;
     width:200px;
 }
+
+article{
+    margin-top: 10px;
+    margin-left: 400px;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    height: 200px;
+    width: 500px;
+    overflow: scroll;
+}
