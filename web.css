@@ -28,11 +28,11 @@ nav{
 article{
     height: 150px;
     width: 500px;
+    overflow: auto;
     margin-top: 15px;
     margin-left: 400px;
     text-align: center;
     border-width: 2px;
     border-style: solid;
     border-color: white;
-    overflow: auto;
 }
