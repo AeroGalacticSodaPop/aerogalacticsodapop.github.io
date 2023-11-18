@@ -30,7 +30,8 @@ article{
     width: 500px;
     overflow: auto;
     margin-top: 15px;
-    margin-left: 400px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     border-width: 2px;
     border-style: solid;
