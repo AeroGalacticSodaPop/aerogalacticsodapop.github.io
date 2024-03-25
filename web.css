@@ -4,6 +4,7 @@ header{
     background-size: 750px contain;
     background-repeat: repeat no-repeat;
     font-size: 130%;
+    background-position: center;
 }
 
 body{
