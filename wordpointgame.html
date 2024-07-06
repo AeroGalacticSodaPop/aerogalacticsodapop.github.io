@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sodapop Galaxy</title>
+
+    <link rel="stylesheet" type="text/css" href="web.css">
+
+    <script src="wordpointgame.js"></script>
+
+  </head>
+  
+  <body>
+    <header>
+        <br><h1 style="margin-left: 3%;">ASCII Point Game</h1><br>
+        <img src="Sodapop_Logo.jpg" class="Logo">
+    </header>
+
+    <nav>
+      <a href="https://aerogalacticsodapop.github.io">[Homepage]</a>
+      <a href="games.html">[Games]</a>
+    </nav>
+    <br>
+    <div style="text-align: center;">
+        <form id= "form">
+            Type a word here: <br><input type="text" id="input" placeholder="Enter text...">
+        </form>
+        <button onclick="convert_and_display()">Submit</button>
+        <p id="points">Points: 0</p>
+        <p id="total">Total: 0</p>
+        <p id="attempts">Attempts remaining: 10</p>
+    </div>
+
+  </body>
+
+</html>
