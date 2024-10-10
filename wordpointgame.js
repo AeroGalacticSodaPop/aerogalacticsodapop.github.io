@@ -6,6 +6,7 @@ let attempts = 10;
 
 function convert_and_display() {
     let input_text = document.getElementById("input").value;
+
     // Check if the new input is in the history
     for (let i = 0; i < history_size; i++) {
         if (input_history[i] === input_text) {
@@ -14,7 +15,7 @@ function convert_and_display() {
         }
     }
 
-    if(attempts<=0){
+    if (attempts <= 0) {
         alert("Exhausted number of attempts, please refresh the page.");
         return null;
     }
@@ -31,13 +32,12 @@ function convert_and_display() {
 
     let result = (total_ascii % 20) + 1;
 
-    total += result
-
+    total += result;
     attempts--;
 
-    document.getElementById("points").innerHTML= "Points: " + result;
-    document.getElementById("total").innerHTML= "Total: " + total;
-    document.getElementById("attempts").innerHTML= "Attempts remaining: " + attempts;
+    document.getElementById("points").innerHTML = "Points: " + result;
+    document.getElementById("total").innerHTML = "Total: " + total;
+    document.getElementById("attempts").innerHTML = "Attempts remaining: " + attempts;
     document.getElementById("input").value = ""; // Reset the input value
 }
 
