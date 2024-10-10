@@ -42,16 +42,27 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("input").value = ""; // Reset the input value
     }
 
-    // Execute function when the user presses Enter on the keyboard
-    document.getElementById("input").addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
-            event.preventDefault(); // Prevent the form from submitting
-            convert_and_display();  // Trigger the function
-        }
-    });
+    // Ensure the input element exists before adding event listeners
+    let inputElement = document.getElementById("input");
+    if (inputElement) {
+        // Execute function when the user presses Enter on the keyboard
+        inputElement.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); // Prevent the form from submitting
+                convert_and_display();  // Trigger the function
+            }
+        });
+    } else {
+        console.error("Input element not found!");
+    }
 
     // Prevent form submission to avoid page reload
-    document.getElementById("form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the default form submission
-    });
+    let formElement = document.getElementById("form");
+    if (formElement) {
+        formElement.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+        });
+    } else {
+        console.error("Form element not found!");
+    }
 });
