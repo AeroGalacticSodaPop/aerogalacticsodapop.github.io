@@ -40,3 +40,10 @@ function convert_and_display() {
     document.getElementById("attempts").innerHTML= "Attempts remaining: " + attempts;
     document.getElementById("input").value = ""; // Reset the input value
 }
+
+// Event listener for Enter key press
+document.getElementById("input").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {  // Check if the key pressed is Enter
+        convert_and_display();  // Call the function to process the input
+    }
+});
