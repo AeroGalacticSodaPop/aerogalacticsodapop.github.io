@@ -41,11 +41,14 @@ function convert_and_display() {
     document.getElementById("input").value = ""; // Reset the input value
 }
 
-// Event listener for Enter key press
-document.getElementById("input").addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {  // Check if the key pressed is Enter
-        event.preventDefault(); // Prevent the default form submission
-        convert_and_display();  // Call the function to process the input
+// Execute function when the user presses enter on the keyboard
+input.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      document.getElementById("button").click();
     }
 });
 
