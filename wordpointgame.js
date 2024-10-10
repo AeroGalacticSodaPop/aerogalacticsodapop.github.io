@@ -48,3 +48,8 @@ document.getElementById("input").addEventListener("keydown", function(event) {
         convert_and_display();  // Call the function to process the input
     }
 });
+
+// Prevent form submission to avoid page reload
+document.getElementById("form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+});
