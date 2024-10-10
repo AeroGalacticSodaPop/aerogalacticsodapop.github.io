@@ -41,14 +41,12 @@ function convert_and_display() {
     document.getElementById("input").value = ""; // Reset the input value
 }
 
-// Execute function when the user presses enter on the keyboard
-input.addEventListener("keypress", function(event) {
+// Execute function when the user presses Enter on the keyboard
+document.getElementById("input").addEventListener("keydown", function(event) {
     // If the user presses the "Enter" key on the keyboard
     if (event.key === "Enter") {
-      // Cancel the default action, if needed
-      event.preventDefault();
-      // Trigger the button element with a click
-      document.getElementById("button").click();
+        event.preventDefault(); // Prevent the form from submitting
+        convert_and_display();  // Trigger the function
     }
 });
 
