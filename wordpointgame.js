@@ -42,9 +42,9 @@ function convert_and_display() {
 }
 
 // Event listener for Enter key press
-document.getElementById("input").addEventListener("keypress", function(event) {
-    if (event.code === 13) {  // Check if the key pressed is Enter
-        event.preventDefault(); //preventing page reload
+document.getElementById("input").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {  // Check if the key pressed is Enter
+        event.preventDefault(); // Prevent the default form submission
         convert_and_display();  // Call the function to process the input
     }
 });
