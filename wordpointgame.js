@@ -44,6 +44,7 @@ function convert_and_display() {
 // Event listener for Enter key press
 document.getElementById("input").addEventListener("keypress", function(event) {
     if (event.code === 13) {  // Check if the key pressed is Enter
+        event.preventDefault(); //preventing page reload
         convert_and_display();  // Call the function to process the input
     }
 });
