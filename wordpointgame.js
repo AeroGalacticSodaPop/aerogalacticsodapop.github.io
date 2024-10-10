@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
     let history_size = 0;
     let total = 0;
     let attempts = 10;
-    
+
     function convert_and_display() {
         let input_text = document.getElementById("input").value;
-    
+
         // Check if the new input is in the history
         for (let i = 0; i < history_size; i++) {
             if (input_history[i] === input_text) {
@@ -15,44 +15,43 @@ document.addEventListener("DOMContentLoaded", function() {
                 return null;
             }
         }
-    
+
         if (attempts <= 0) {
             alert("Exhausted number of attempts, please refresh the page.");
             return null;
         }
-    
+
         // Add the new input to the history
         input_history[history_size] = input_text.slice(0, 50);
         history_size += 1;
-    
+
         // Convert each character to its ASCII code and sum them up
         let total_ascii = 0;
         for (let i = 0; i < input_text.length; i++) {
             total_ascii += input_text.charCodeAt(i);
         }
-    
+
         let result = (total_ascii % 20) + 1;
-    
+
         total += result;
         attempts--;
-    
+
         document.getElementById("points").innerHTML = "Points: " + result;
         document.getElementById("total").innerHTML = "Total: " + total;
         document.getElementById("attempts").innerHTML = "Attempts remaining: " + attempts;
         document.getElementById("input").value = ""; // Reset the input value
     }
-}
 
-// Execute function when the user presses Enter on the keyboard
-document.getElementById("input").addEventListener("keydown", function(event) {
-    // If the user presses the "Enter" key on the keyboard
-    if (event.key === "Enter") {
-        event.preventDefault(); // Prevent the form from submitting
-        convert_and_display();  // Trigger the function
-    }
-});
+    // Execute function when the user presses Enter on the keyboard
+    document.getElementById("input").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault(); // Prevent the form from submitting
+            convert_and_display();  // Trigger the function
+        }
+    });
 
-// Prevent form submission to avoid page reload
-document.getElementById("form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the default form submission
+    // Prevent form submission to avoid page reload
+    document.getElementById("form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+    });
 });
